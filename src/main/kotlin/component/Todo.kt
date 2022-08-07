@@ -41,6 +41,7 @@ val Todo = FC<TodoProps> { props ->
             key = index.toString()
 
             div {
+                className = ClassName("text-container")
                 key = item.id.toString()
                 onClick = { props.completeTodo(item.id!!) }
 
@@ -52,13 +53,13 @@ val Todo = FC<TodoProps> { props ->
             div {
                 className = ClassName("icons")
                 a {
-                    onClick = { props.removeTodo(item.id!!) }
                     className = ClassName("delete-icon")
+                    onClick = { props.removeTodo(item.id!!) }
                     RiCloseCircleLine { size = 30 }
                 }
                 a {
-                    onClick = { setEdit(item) }
                     className = ClassName("edit-icon")
+                    onClick = { setEdit(item) }
                     TiEdit { size = 30 }
                 }
             }
