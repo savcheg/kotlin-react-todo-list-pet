@@ -28,7 +28,7 @@ kotlin {
             }
             commonWebpackConfig {
                 cssSupport.enabled = true
-//                cssSupport.mode = "extract"
+                cssSupport.mode = "extract"
             }
         }
         binaries.executable()
